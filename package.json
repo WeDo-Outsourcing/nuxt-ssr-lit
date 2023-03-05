@@ -1,0 +1,53 @@
+{
+  "name": "nuxt-ssr-lit",
+  "version": "1.4.1",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "lint": "eslint \"src/**/*.*\"  --fix",
+    "test": "vitest run tests",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@lit-labs/ssr": "^3.0.0",
+    "@nuxt/kit": "3.0.0",
+    "@webcomponents/template-shadowroot": "^0.1.0",
+    "cheerio": "^1.0.0-rc.12",
+    "magic-string": "^0.26.7",
+    "ufo": "^1.0.1",
+    "ultrahtml": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@nuxt/module-builder": "^0.2.1",
+    "@nuxt/schema": "3.0.0",
+    "@nuxt/test-utils-edge": "^3.0.0-rc.12-27759910.9e6d292",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.2",
+    "nuxt": "3.0.0",
+    "prettier": "^2.7.1",
+    "vitest": "^0.24.1"
+  }
+}

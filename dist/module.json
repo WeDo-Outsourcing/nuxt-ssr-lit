@@ -1,0 +1,5 @@
+{
+  "name": "nuxt-ssr-lit",
+  "version": "1.4.1",
+  "configKey": "ssrLit"
+}
